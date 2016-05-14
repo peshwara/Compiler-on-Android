@@ -13,22 +13,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Run"
-        android:id="@+id/button"
+        android:id="@+id/run"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_alignTop="@+id/button"
+        android:id="@+id/input"
+        android:layout_alignTop="@+id/run"
         android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/button" />
+        android:layout_toStartOf="@+id/run" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/button"></RelativeLayout>
+        android:layout_above="@+id/run"></RelativeLayout>
 </RelativeLayout>
