@@ -1,14 +1,16 @@
 package com.example.kartikbholla.fourfp;
 import java.util.LinkedList;
+import java.util.Scanner;
 
 /**
  * Created by kartikbholla on 15/05/16.
  */
-    /** Helpful Sources
+    /** Sources
     //https://gist.github.com/aaronjwood/9038187
     //http://www.cs.technion.ac.il/~imaman/programs/lexer.html
     //http://stackoverflow.com/questions/17848207/making-a-lexical-analyzer
     //http://www.javaworld.com/article/2077315/java-app-dev/looking-for-lex-and-yacc-for-java--you-don-t-know-jack.html
+     //http://docs.oracle.com/javase/7/docs/api/java/util/Scanner.html
     */
 
 public class Calc extends MainActivity {
@@ -16,6 +18,8 @@ public class Calc extends MainActivity {
     /**
      * Types for this lexical analyzer to analyze
      */
+    Scanner sc = new Scanner(System.in);
+        int i = sc.nextInt();
     private static enum Type {
         ADD, SUBTRACT, MULTIPLY, DIVIDE, REMAINDER, OPERAND
     }
@@ -123,6 +127,15 @@ public class Calc extends MainActivity {
         LinkedList<Token<Type, String>> tokens = Calc.analyze(args[0]);
         for(Token token : tokens) {
             System.out.println(token);
+
+
+            String input = "int a = 5;";
+            Scanner s = new Scanner(input).useDelimiter("\\s*;\\s*");
+            System.out.println(s.next());
+            System.out.println(s.next());
+            System.out.println(s.next());
+            System.out.println(s.next());
+            s.close();
         }
     }
 }

@@ -6,11 +6,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import java.util.Scanner;
 import java.util.Vector;
 
 public class MainActivity extends AppCompatActivity {
 
     public String syntax; //input string will be taken here
+   // Scanner sc = new Scanner(System.in);
+    //int i = sc.nextInt();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +50,16 @@ public class MainActivity extends AppCompatActivity {
         //int newIndex;
         int count = 0;
         //boolean space = false;
+        String input = syntax;
+        Scanner s = new Scanner(input).useDelimiter("\\s* \\s*");
+        System.out.println(s.next());
+        System.out.println(s.next());
+        System.out.println(s.next());
+        System.out.println(s.next());
+        s.close();
 
-        for (int j=0; j<= strlen; j++){
+/*
+       for (int j=0; j<= strlen; j++){
             if(syntax.charAt(j) == ' '||syntax.charAt(j) == '\t'){
                 count ++;
                 if (count == 1){
@@ -74,10 +86,12 @@ public class MainActivity extends AppCompatActivity {
                 }while(syntax.charAt(j) == '\n');
             }
         }
+
     }   // end of parse
     public static void vectorize(String lexem){
         Vector<String> lexemVector = null;
-        lexemVector.add(lexem);
+        lexemVector.add(lexem);*/
     }   // end of vectorize
+
 
 }
