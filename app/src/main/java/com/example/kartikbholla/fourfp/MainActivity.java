@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 //space = false;
                 // if(space == false);
                 // space=0;
-                // index = j;// non space caracter index
+                // index = j;// non space character index
                 // newIndex = ParseV2(syntax, strlen, index);
             }
             else if (syntax.charAt(j) == '#'){
